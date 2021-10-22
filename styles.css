@@ -1,12 +1,14 @@
 
 h1 {
-  color: black;
+  color:black;
   text-align: center;
   border-style: outset;
-  border-left: 100px solid red;
-  background-color: rgba(250, 249, 248, 0.911);
-  letter-spacing: 20px;
-  background-image: url("./pictures/background1.jpg");
+  border-left: 120px solid #f44336;
+  background-color: whitesmoke;
+  background-size: 200px;
+  letter-spacing: 25px;
+  /*background-image: url("./pictures/background1.jpg");*/
+  background-color:whitesmoke;
   
   }
 div {
@@ -14,19 +16,22 @@ div {
   display: inline-block;
 }
 
-.izbornik {
+.dropdown {
   font-family: Georgia, 'Times New Roman', Times, serif;
   width: 100px;
   position: relative;
-  top: -50px;
-  background-color: red;
+  top: -53px;
+  left: 10px;
+  background-color:#f44336;
+  font-variant: small-caps;
 }
 .search {
   width: 200px;
   position: relative;
-  top: -50px;
+  top: -53px;
+  left: 20px;
 }
-.uppercase {
+.small-caps {
   font-variant: small-caps;
 }
 li {
@@ -40,43 +45,112 @@ li {
 footer{
 border-top-style: solid;
 text-align: center;
+
 }
 .soc_mreze {
   position: relative;
   display: block;
 }
 body {
-  background-image: linear-gradient(to right, white , rgb(31, 30, 30));
+  background-image: linear-gradient(to right, rgb(255, 255, 255) , rgb(31, 30, 30));
 }
 .pic {
   width: 24%;
+ 
 }
 .img{
   width: 100%;
   height: 100%;
 }
-.btn
+/*.btn
 {
   position: relative;
   display: block;
   left: 42%;
-}
+  text-decoration: none;
+}*/
 .sign_up 
 {
   position: relative;
   display: block;
   left: 35%;
+  top: -750px;
+
 }
 .sirina{
   width: 400px;
+  
 }
 .btn_singin{
   position: relative;
   display: block;
   left: 13%;
+  width: 10%;
+  background-color: rgba(255, 255, 255, 0.397); 
+  color: black; 
+  border: 2px solid #f44336;
 }
-.picture_help
-{
+.btn_singin:hover {
+  background-color: #f44336;
+  color: white;
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.help {
+  font-family:'Times New Roman', Times, serif;
+  font-size: large;
+  text-align: center;
+}
+.basket_img {
   position: relative;
-  left: 60%;
+  display: block;
+  top: -61px;
+  left: 120px;
 }
+.btn {
+  background-color: rgba(255, 255, 255, 0.404);
+  color: black; 
+  border: 2px solid #f44336;
+  position: relative;
+  display: block;
+  left: 42%;
+  text-decoration: none;
+}
+.btn:hover {
+  background-color: #f44336;
+  color: white;
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+.circle_img{
+  position: relative;
+  display: block;
+  top: 50%;
+}
+.img_help{
+  position: relative;
+  display: block;
+  left: 30%;
+}
+.home{
+  color: black;
+  display: inline;
+  position: relative;
+  left: 40px;
+  top: -105px;
+}
+/* visited link */
+a:visited {
+  color: grey;
+}
+
+/* mouse over link */
+a:hover {
+  color: black;
+}
+.all_img{
+  position: relative;
+  display: block;
+  left: 20px;
+}
+
+
