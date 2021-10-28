@@ -9,13 +9,12 @@ h1 {
   letter-spacing: 25px;
   /*background-image: url("./pictures/background1.jpg");*/
   background-color:whitesmoke;
-  
   }
-div {
+div 
+{
   position: relative;
   display: inline-block;
 }
-
 .dropdown {
   font-family: Georgia, 'Times New Roman', Times, serif;
   width: 100px;
@@ -25,9 +24,15 @@ div {
   background-color:#f44336;
   font-variant: small-caps;
 }
-
+.sign_up 
+{
+  position: relative;
+  display: block;
+  left: 100%;
+  top: -900px;
+}
 .search {
-  width: 200px;
+  width: 20%;
   position: relative;
   top: -53px;
   left: 20px;
@@ -40,7 +45,8 @@ div {
   top: -20%;
   right: 20px;
 }
-li {
+li 
+{
   text-decoration: beige;
   display: inline;
   position: relative;
@@ -69,23 +75,14 @@ body {
   width: 100%;
   height: 100%;
 }
-.sign_up 
-{
-  position: relative;
-  display: block;
-  left: 35%;
-  top: -750px;
-
-}
 .sirina{
   width: 400px;
-  
 }
 .btn_singin{
   position: relative;
-  display: block;
-  left: 13%;
-  width: 10%;
+  display: inline;
+  left: 0%;
+  width: 20%;
   background-color: rgba(255, 255, 255, 0.397); 
   color: black; 
   border: 2px solid #f44336;
@@ -124,7 +121,7 @@ body {
 .circle_img{
   position: relative;
   display: block;
-  top: 50%;
+  top: -200px;
 }
 .img_help{
   position: relative;
@@ -150,4 +147,6 @@ a:hover {
   display: block;
   left: 5%;
 }
-
+html {
+  height: 100%;
+}

@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
-<head>
+<head >
+   <script src="./myScript.js"></script>
    <link rel="stylesheet" href="styles.css">
    <h1>SIGN IN</h1>
 </head>
@@ -8,15 +9,47 @@
    <div class="circle_img">
       <img src="./pictures/circle2.png" alt="circle.png" class="img"><br>
    </div>
-   <form class="sign_up">
-      <label for="username">Email address: </label><br>
-      <input class="sirina" type="email" id="email" name="email" style="text-align: center;"><br>
-      <br>
-      <label for="pwd">Password:</label><br>
-      <input class="sirina" type="password" id="pwd" name="pwd" style="text-align: center;"><br>
-      <br>
-      <input class="btn_singin" type="button" value="Sign up!">
-    </form>
-    
-</body>
+   <div id="main" align="center">
+   <div >
+      <div class="sign_up">
+         <tr>
+            <td align="right">Name </td>
+            <br>
+            <td><input type="text" placeholder="Enter user here" id="t1" class="sirina" style="text-align: center;" /></td>
+            </tr>
+            <br><br>
+            <tr>
+            <td align="right">E-mail </td>
+            <br>
+            <td><input type="text" placeholder="Enter e-mail here" id="t2" class="sirina" style="text-align: center;" /></td>
+            </tr>
+            <br><br>
+            <tr>
+            <td align="right">Username </td>
+            <br>
+            <td><input type="text" placeholder="Enter Username here" id="t3" class="sirina" style="text-align: center;" /></td>
+            </tr>
+            <br><br>
+            <tr>
+            <td align="right">Password </td>
+            <br>
+            <td><input type="password" placeholder="Enter Password here" id="t4" class="sirina" style="text-align: center;" /></td>
+            </tr>
+            <br><br>
+            <tr>
+            <td align="right">Confirm Password </td>
+            <br>
+            <td><input type="password" placeholder="Enter Password here" id="t5" class="sirina" style="text-align: center;" /></td>
+            </tr>
+            <br>
+            <tr>
+            <br>
+            <td>
+            <input class="btn_singin" type="reset" value="Clear" onclick="clearFunc()" id="res" />
+            <input class="btn_singin" type="submit" value="Next!" onclick="registration()" /></td>
+            </tr>
+      </div>
+   </div>
+   </div>
+   </body>
 </html>

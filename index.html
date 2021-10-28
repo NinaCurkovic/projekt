@@ -49,13 +49,6 @@
     </div>
     <div id="men">
         <div class="shopping-products" >
-            <img src="./pictures/men1.jpg" alt="muska_odjeca1" class="img"><br>
-            <p style="text-align: center;">OVERSIZED COAT</p>
-            <p style="text-align: center;">1,599.00 KN</p>
-            <input class="btn" type="button" value="Buy!">
-            <br>
-        </div>
-        <div class="shopping-products" >
             <img src="./pictures/men2.jpg" alt="muska_odjeca2" class="img"><br>
             <p style="text-align: center;">TEXTURED EASY CARE SHIRT</p>
             <p style="text-align: center;">149,90 KN</p>
@@ -69,8 +62,22 @@
             <input class="btn" type="button" value="Buy!">
             <br>
         </div>
+        <div class="shopping-products" >
+            <img src="./pictures/men1.jpg" alt="muska_odjeca1" class="img"><br>
+            <p style="text-align: center;">OVERSIZED COAT</p>
+            <p style="text-align: center;">1,599.00 KN</p>
+            <input class="btn" type="button" value="Buy!">
+            <br>
+        </div>
     </div>
     <div id="children">
+        <div class="shopping-products" >
+            <img src="./pictures/children2.jpg" alt="djecija_odjeca2" class="img"><br>
+            <p style="text-align: center;">SPARKLY MOTORCYCLE JACKET</p>
+            <p style="text-align: center;">499.90 KN</p>
+            <input class="btn" type="button" value="Buy!">
+            <br>
+        </div>
         <div class="shopping-products" >
             <img src="./pictures/children1.jpg" alt="djecija_odjeca1" class="img"><br>
             <p style="text-align: center;">STAR-CAUSE DRESS</p>
@@ -78,25 +85,18 @@
             <input class="btn" type="button" value="Buy!">
             <br>
         </div>
-        <div class="shopping-products" >
-            <img src="./pictures/children2.jpg" alt="djecija_odjeca1" class="img"><br>
-            <p style="text-align: center;">SPARKLY MOTORCYCLE JACKET</p>
-            <p style="text-align: center;">499.90 KN</p>
-            <input class="btn" type="button" value="Buy!">
-            <br>
-        </div>
     </div>
-    
 </div>
 <br>
 <br>
 <footer>
     <br>
     <br>
-    <form>
+    <form onsubmit="return validate_form(this);" method="post">
         <label ><b>Sing up for our newsletter:</b></label><br><br>
-        <input type="email" name="email" placeholder="Enter your address here"  style="width: 300px;text-align: center;">
-    </form>
+        <input type="text" name="email" placeholder="Enter your address here"  style="width: 300px;text-align: center;" size="35"/>
+        <input type="submit" value="Submit"/>
+      </form>
     <br>
     <form class="soc_mreze">
         <div>
