@@ -1,34 +1,31 @@
 <!DOCTYPE html>
 <html>
-<head >
+<head>
     <title>Web shop</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <h1>ZARA</h1>
+    
     <link rel="stylesheet" href="styles.css">
     
-    <select class="dropdown"  id='myDropdown' onchange='filterDropdown()'>
+</head>
+<body>
+<header>
+    <h1>ZARA</h1>
+    <select class="dropdown"  id='myDropdown'>
         <option style="text-align: center;" value="all" class="small-caps">All</option>
         <option style="text-align: center;" value="women"  class="small-caps">Women</option>
         <option style="text-align: center;" value="men" class="small-caps">Men</option>
         <option style="text-align: center;" value="children" class="small-caps">Children</option>
     </select>
     
-    <input id="searchbar" onkeyup="search()" type="search" name="search" placeholder="Search" class="search">
+    <input id="searchbar" type="search" name="search" placeholder="Search" class="search">
     <ul class="new_pages">
         <li><a href="./SignUp.html" class="small-caps">Sign up</a></li>
         <li><a href="./Help.html" class="small-caps">Help</a></li>
         <li><a href="./Basket.html" class="small-caps">Basket</a></li>
     </ul>
-</head>
-<body>
-<div class="all_img">
-    <div id="women">
-    </div>
-    <div id="men">
-    </div>
-    <div id="children">
-    </div>
+</header>
+<div class="all_img" id="all_product">
 </div>
 <br>
 <br>

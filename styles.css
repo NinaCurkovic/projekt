@@ -28,8 +28,8 @@ div
 {
   position: relative;
   display: block;
-  left: 100%;
-  top: -900px;
+  left: 110%;
+  top: -200%;
 }
 .search {
   width: 20%;
@@ -43,7 +43,7 @@ div
 .new_pages {
   position: relative;
   top: -20%;
-  right: 20px;
+  right: 5%;
 }
 li 
 {
