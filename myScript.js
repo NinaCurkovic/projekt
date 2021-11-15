@@ -1,6 +1,6 @@
 window.onload = function () {
 	let idCounter = 1;
-
+	
 	class Product {
 		constructor (imgSource, imgAlt, description, price, genderType) {
 			this.id = idCounter;
@@ -20,8 +20,8 @@ window.onload = function () {
 		new Product('./pictures/men1.jpg', 'muska_odjeca1', 'TEXTURED EASY CARE SHIRT', 149.90, 'men'),
 		new Product('./pictures/men2.jpg', 'muska_odjeca2', 'HERRINGBONE PATTERNED SHIRT', 499.90, 'men'),
 		new Product('./pictures/men3.jpg', 'muska_odjeca3', 'OVERSIZED COAT', 1599.90, 'men'),
-		new Product('./pictures/children1.jpg', 'djecja_odjeca1', 'SPARKLY MOTORCYCLE JACKET', 499.90, 'child'),
-		new Product('./pictures/children2.jpg', 'djecja_odjeca2', 'STAR-CAUSE DRESS', 299.90, 'child'),
+		new Product('./pictures/children1.jpg', 'djecja_odjeca1', 'SPARKLY MOTORCYCLE JACKET', 499.90, 'children'),
+		new Product('./pictures/children2.jpg', 'djecja_odjeca2', 'STAR-CAUSE DRESS', 299.90, 'children'),
 	];
 
 	function addProductDataArrayElements(elementsData) {
@@ -33,6 +33,8 @@ window.onload = function () {
         const arrayFromLocalStorage = JSON.parse(localStorage.getItem('productDataArray')) || [];
         arrayFromLocalStorage.push(data);
         localStorage.setItem('productDataArray', JSON.stringify(arrayFromLocalStorage));
+		console.log(arrayFromLocalStorage);
+
     }
 
 	function addHTMLContent(element, data) {
@@ -46,7 +48,6 @@ window.onload = function () {
 			</div>
 		`
 	}
-
 	document.addEventListener('click',function(e) {
 		if(e.target && e.target.id.includes('basket-')) {
 			const productId = e.target.id.replace('basket-','');
@@ -60,9 +61,8 @@ window.onload = function () {
 			addHTMLContent(section, product);
 		}
 	}
-
 	addProductDataArrayElements(productDataArray);
-
+}
 	// Search "shopping products"
 	function search() {
 		let input = document.getElementById('searchbar').value
@@ -107,94 +107,98 @@ window.onload = function () {
 			}
 		}
 	}
-	function validate_form(form) {
-	with(form) {
-		if (validate_email(email, "This E-Mail Address is not a valid!") == false) 
-		{
-		email.focus();
-		return false;
-		}
-		else {
-		alert('Thank You!');
-		window.location = "file:///C:/Users/ncurkovic/Projects/projekt/index.html"; 
-		}
-	}
-	}
-	// SignUp page
-	function registration()
-	{
+// SignUp page
+function registration()
+{
 
-		var name= document.getElementById("t1").value;
-		var email= document.getElementById("t2").value;
-		var uname= document.getElementById("t3").value;
-		var pwd= document.getElementById("t4").value;			
-		var cpwd= document.getElementById("t5").value;
-		
-		//email id expression code
-		var pwd_expression = /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-])/;
-		var letters = /^[A-Za-z]+$/;
-		var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+    var name= document.getElementById("t1").value;
+    var email= document.getElementById("t2").value;
+    var uname= document.getElementById("t3").value;
+    var pwd= document.getElementById("t4").value;			
+    var cpwd= document.getElementById("t5").value;
+    
+    //email id expression code
+    var pwd_expression = /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-])/;
+    var letters = /^[A-Za-z]+$/;
+    var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
 
-		if(name=='')
-		{
-			alert('Please enter your name');
+    if(name=='')
+    {
+        alert('Please enter your name');
+    }
+    else if(!letters.test(name))
+    {
+        alert('Name field required only alphabet characters');
+    }
+    else if(email=='')
+    {
+        alert('Please enter your user email id');
+    }
+    else if (!filter.test(email))
+    {
+        alert('Invalid email');
+    }
+    else if(uname=='')
+    {
+        alert('Please enter the user name.');
+    }
+    else if(!letters.test(uname))
+    {
+        alert('User name field required only alphabet characters');
+    }
+    else if(pwd=='')
+    {
+        alert('Please enter Password');
+    }
+    else if(cpwd=='')
+    {
+        alert('Enter Confirm Password');
+    }
+    else if(!pwd_expression.test(pwd))
+    {
+        alert ('Upper case, Lower case, Special character and Numeric letter are required in Password filed');
+    }
+    else if(pwd != cpwd)
+    {
+        alert ('Password not Matched');
+    }
+    else if(document.getElementById("t5").value.length < 6)
+    {
+        alert ('Password minimum length is 6');
+    }
+    else if(document.getElementById("t5").value.length > 12)
+    {
+        alert ('Password max length is 12');
+    }
+    else
+    {				                            
+        alert('Thank You for Login');
+        window.location = "./index.html"; 
+    }
+}
+function clearFunc()
+{
+    document.getElementById("t1").value="";
+    document.getElementById("t2").value="";
+    document.getElementById("t3").value="";
+    document.getElementById("t4").value="";
+    document.getElementById("t5").value="";
+}
+//newsletter
+
+	function validateEmail(){
+		var email1= document.getElementById("email1").value;
+		var filter1 = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+		if(email1==''){
+			alert('Please enter your email');
 		}
-		else if(!letters.test(name))
-		{
-			alert('Name field required only alphabet characters');
-		}
-		else if(email=='')
-		{
-			alert('Please enter your user email id');
-		}
-		else if (!filter.test(email))
+		else if (!filter1.test(email1))
 		{
 			alert('Invalid email');
 		}
-		else if(uname=='')
-		{
-			alert('Please enter the user name.');
-		}
-		else if(!letters.test(uname))
-		{
-			alert('User name field required only alphabet characters');
-		}
-		else if(pwd=='')
-		{
-			alert('Please enter Password');
-		}
-		else if(cpwd=='')
-		{
-			alert('Enter Confirm Password');
-		}
-		else if(!pwd_expression.test(pwd))
-		{
-			alert ('Upper case, Lower case, Special character and Numeric letter are required in Password filed');
-		}
-		else if(pwd != cpwd)
-		{
-			alert ('Password not Matched');
-		}
-		else if(document.getElementById("t5").value.length < 6)
-		{
-			alert ('Password minimum length is 6');
-		}
-		else if(document.getElementById("t5").value.length > 12)
-		{
-			alert ('Password max length is 12');
-		}
 		else
 		{				                            
-			alert('Thank You for Login & You are Redirecting to Campuslife Website');
-			window.location = "file:///C:/Users/ncurkovic/Projects/projekt/index.html"; 
+			alert('Thank You!');
+			window.location = "./index.html"; 
 		}
-	}
-	function clearFunc()
-	{
-		document.getElementById("t1").value="";
-		document.getElementById("t2").value="";
-		document.getElementById("t3").value="";
-		document.getElementById("t4").value="";
-		document.getElementById("t5").value="";
-	}
-}
+	} 
