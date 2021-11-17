@@ -5,13 +5,11 @@ window.onload = function () {
     clearCartBtn.addEventListener('click', clearCart);
     shoppingCart.addEventListener('click', removeProducts);
     buyProductsBtn.addEventListener('click', buyProducts);
+
     function getFromLocalStorage(){
-        
 		const arrayFromLocalStorage = JSON.parse(localStorage.getItem('productDataArray')) || [];
 		let productsLS= arrayFromLocalStorage; 
-	
 		 productsLS.forEach(function(data) {
-             
 			const row= document.createElement('tr');
 			row.innerHTML= ` 
 				<tr>
@@ -36,6 +34,7 @@ window.onload = function () {
     }
     function clearCart(e){
         shoppingCart.innerHTML='';
+        localStorage.removeItem('productDataArray');
     }
 
     function buyProducts(e){

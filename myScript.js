@@ -17,11 +17,11 @@ window.onload = function () {
 		new Product('./pictures/women1.jpg', 'Zenska_haljina1', 'LONG DRESS LIMITED EDITION', 699.90, 'women'),
 		new Product('./pictures/women2.jpg', 'Zenska_haljina2', 'PLEATED DRESS LIMITED EDITION', 699.90, 'women'),
 		new Product('./pictures/women3.jpg', 'Zenska_haljina3', 'DRESS LIKE A LIMITED EDITION ROBE', 699.90, 'women'),
-		new Product('./pictures/men1.jpg', 'muska_odjeca1', 'TEXTURED EASY CARE SHIRT', 149.90, 'men'),
+		new Product('./pictures/men3.jpg', 'muska_odjeca1', 'TEXTURED EASY CARE SHIRT', 149.90, 'men'),
 		new Product('./pictures/men2.jpg', 'muska_odjeca2', 'HERRINGBONE PATTERNED SHIRT', 499.90, 'men'),
-		new Product('./pictures/men3.jpg', 'muska_odjeca3', 'OVERSIZED COAT', 1599.90, 'men'),
-		new Product('./pictures/children1.jpg', 'djecja_odjeca1', 'SPARKLY MOTORCYCLE JACKET', 499.90, 'children'),
-		new Product('./pictures/children2.jpg', 'djecja_odjeca2', 'STAR-CAUSE DRESS', 299.90, 'children'),
+		new Product('./pictures/men1.jpg', 'muska_odjeca3', 'OVERSIZED COAT', 1599.90, 'men'),
+		new Product('./pictures/children2.jpg', 'djecja_odjeca1', 'SPARKLY MOTORCYCLE JACKET', 499.90, 'children'),
+		new Product('./pictures/children1.jpg', 'djecja_odjeca2', 'STAR-CAUSE DRESS', 299.90, 'children'),
 	];
 
 	function addProductDataArrayElements(elementsData) {
