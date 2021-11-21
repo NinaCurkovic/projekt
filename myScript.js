@@ -116,62 +116,69 @@ function registration()
     var uname= document.getElementById("t3").value;
     var pwd= document.getElementById("t4").value;			
     var cpwd= document.getElementById("t5").value;
+
     
     //email id expression code
     var pwd_expression = /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-])/;
     var letters = /^[A-Za-z]+$/;
     var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+	labela_name='';
 
     if(name=='')
     {
-        alert('Please enter your name');
+		document.getElementById("error_name").innerHTML="Please enter your name";
+		
     }
     else if(!letters.test(name))
     {
-        alert('Name field required only alphabet characters');
+		document.getElementById("error_name").innerHTML="Name field required only alphabet characters";
     }
     else if(email=='')
     {
-        alert('Please enter your user email id');
+		document.getElementById("error_name").innerHTML=" ";
+		document.getElementById("error_email").innerHTML='Please enter your user email';
     }
     else if (!filter.test(email))
     {
-        alert('Invalid email');
+		document.getElementById("error_email").innerHTML='Invalid email';
     }
     else if(uname=='')
     {
-        alert('Please enter the user name.');
+		document.getElementById("error_email").innerHTML='';
+        document.getElementById("error_username").innerHTML='Please enter the user name.';
     }
     else if(!letters.test(uname))
     {
-        alert('User name field required only alphabet characters');
+		document.getElementById("error_username").innerHTML='User name field required only alphabet characters';
     }
     else if(pwd=='')
     {
-        alert('Please enter Password');
+		document.getElementById("error_username").innerHTML='';
+		document.getElementById("error_pass").innerHTML='Please enter Password';
     }
-    else if(cpwd=='')
+	else if(!pwd_expression.test(pwd))
     {
-        alert('Enter Confirm Password');
+		document.getElementById("error_pass").innerHTML='Upper case, Lower case, Special character and Numeric letter are required in Password filed';
     }
-    else if(!pwd_expression.test(pwd))
+	else if(document.getElementById("t5").value.length < 6)
     {
-        alert ('Upper case, Lower case, Special character and Numeric letter are required in Password filed');
-    }
-    else if(pwd != cpwd)
-    {
-        alert ('Password not Matched');
-    }
-    else if(document.getElementById("t5").value.length < 6)
-    {
-        alert ('Password minimum length is 6');
+		document.getElementById("error_pass").innerHTML='Password minimum length is 6';
     }
     else if(document.getElementById("t5").value.length > 12)
     {
-        alert ('Password max length is 12');
+		document.getElementById("error_pass").innerHTML='Password max length is 12';
+    }
+    else if(cpwd=='')
+    {
+		document.getElementById("error_pass").innerHTML='';
+		document.getElementById("error_cpass").innerHTML='Enter Confirm Password';
+    }
+    else if(pwd != cpwd)
+    {
+		document.getElementById("error_cpass").innerHTML='Password not Matched';
     }
     else
-    {				                            
+    {			                            
         alert('Thank You for Login');
         window.location = "./index.html"; 
     }
@@ -183,6 +190,12 @@ function clearFunc()
     document.getElementById("t3").value="";
     document.getElementById("t4").value="";
     document.getElementById("t5").value="";
+
+	document.getElementById('error_name').innerHTML='';
+	document.getElementById('error_email').innerHTML='';
+	document.getElementById('error_username').innerHTML='';
+	document.getElementById('error_pass').innerHTML='';
+	document.getElementById('error_cpass').innerHTML='';
 }
 //newsletter
 
