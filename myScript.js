@@ -78,7 +78,7 @@ window.onload = function () {
 			}
 		})
 	}
-	document.getElementById('searchbar').addEventListener("keyup", search)
+	document.getElementById('searchbar').addEventListener("keyup", search);
 	// Filter Dropdown list
 	function filterDropdown() {
 		var user = document.getElementById("myDropdown").value;
@@ -123,59 +123,63 @@ function registration()
     var letters = /^[A-Za-z]+$/;
     var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
 	labela_name='';
-
+	
+	
     if(name=='')
     {
-		document.getElementById("error_name").innerHTML="Please enter your name";
+		document.getElementById("error_name").innerHTML="<br>Please enter your name";
+		document.getElementById("error_name").style.color="red";
 		
     }
     else if(!letters.test(name))
     {
-		document.getElementById("error_name").innerHTML="Name field required only alphabet characters";
+		document.getElementById("error_name").innerHTML="<br>Name field required only alphabet characters";
+		document.getElementById("error_name").style.color="red";
     }
     else if(email=='')
     {
 		document.getElementById("error_name").innerHTML=" ";
-		document.getElementById("error_email").innerHTML='Please enter your user email';
+		document.getElementById("error_email").innerHTML='<br>Please enter your user email';
+		document.getElementById("error_email").style.color="red";
     }
     else if (!filter.test(email))
     {
-		document.getElementById("error_email").innerHTML='Invalid email';
+		document.getElementById("error_email").innerHTML='<br>Invalid email';
+		document.getElementById("error_email").style.color="red";
     }
     else if(uname=='')
     {
 		document.getElementById("error_email").innerHTML='';
-        document.getElementById("error_username").innerHTML='Please enter the user name.';
+        document.getElementById("error_username").innerHTML='<br>Please enter the user name.';
+		document.getElementById("error_username").style.color="red";
+		
     }
     else if(!letters.test(uname))
     {
-		document.getElementById("error_username").innerHTML='User name field required only alphabet characters';
+		document.getElementById("error_username").innerHTML='<br>User name field required only alphabet characters';
+		document.getElementById("error_username").style.color="red";
     }
     else if(pwd=='')
     {
 		document.getElementById("error_username").innerHTML='';
-		document.getElementById("error_pass").innerHTML='Please enter Password';
+		document.getElementById("error_pass").innerHTML='<br>Please enter Password';
+		document.getElementById("error_pass").style.color="red";
     }
 	else if(!pwd_expression.test(pwd))
     {
-		document.getElementById("error_pass").innerHTML='Upper case, Lower case, Special character and Numeric letter are required in Password filed';
-    }
-	else if(document.getElementById("t5").value.length < 6)
-    {
-		document.getElementById("error_pass").innerHTML='Password minimum length is 6';
-    }
-    else if(document.getElementById("t5").value.length > 12)
-    {
-		document.getElementById("error_pass").innerHTML='Password max length is 12';
+		document.getElementById("error_pass").innerHTML='<br>Upper case,Lower case,Special character and Numeric letter are required in Password filed';
+		document.getElementById("error_pass").style.color="red";
     }
     else if(cpwd=='')
     {
 		document.getElementById("error_pass").innerHTML='';
-		document.getElementById("error_cpass").innerHTML='Enter Confirm Password';
+		document.getElementById("error_cpass").innerHTML='<br>Enter Confirm Password';
+		document.getElementById("error_cpass").style.color="red";
     }
     else if(pwd != cpwd)
     {
-		document.getElementById("error_cpass").innerHTML='Password not Matched';
+		document.getElementById("error_cpass").innerHTML='<br>Password not Matched';
+		document.getElementById("error_cpass").style.color="red";
     }
     else
     {			                            
@@ -192,6 +196,7 @@ function clearFunc()
     document.getElementById("t5").value="";
 
 	document.getElementById('error_name').innerHTML='';
+	
 	document.getElementById('error_email').innerHTML='';
 	document.getElementById('error_username').innerHTML='';
 	document.getElementById('error_pass').innerHTML='';
