@@ -34,9 +34,7 @@ window.onload = function () {
         arrayFromLocalStorage.push(data);
         localStorage.setItem('productDataArray', JSON.stringify(arrayFromLocalStorage));
 		console.log(arrayFromLocalStorage);
-
     }
-
 	function addHTMLContent(element, data) {
 		element.innerHTML += `
 			<div class="shopping-products" data-category=${data.genderType}>
@@ -54,7 +52,6 @@ window.onload = function () {
 			addToBasketLocalStorage(productId);
 		}
 	});
-
 	function addProductElement(product) {
 		var section = document.getElementById('all_product');
 		if (section) {
@@ -196,7 +193,6 @@ function clearFunc()
     document.getElementById("t5").value="";
 
 	document.getElementById('error_name').innerHTML='';
-	
 	document.getElementById('error_email').innerHTML='';
 	document.getElementById('error_username').innerHTML='';
 	document.getElementById('error_pass').innerHTML='';
@@ -207,12 +203,13 @@ function clearFunc()
 	function validateEmail(){
 		var email1= document.getElementById("email1").value;
 		var filter1 = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
-		if(email1==''){
-			alert('Please enter your email');
+		if(email1=='')
+		{
+			alert("Please enter your user email");
 		}
 		else if (!filter1.test(email1))
 		{
-			alert('Invalid email');
+			alert("Invalid email");
 		}
 		else
 		{				                            

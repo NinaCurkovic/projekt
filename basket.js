@@ -23,7 +23,6 @@ window.onload = function () {
 				`;
 			shoppingCart.appendChild(row);
 		 }); 
-
     }
     getFromLocalStorage();
 
@@ -36,11 +35,9 @@ window.onload = function () {
         shoppingCart.innerHTML='';
         localStorage.removeItem('productDataArray');
     }
-
     function buyProducts(e){
         shoppingCart.innerHTML='';
         alert('Thank You!');
     }
-  
 }
 
